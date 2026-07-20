@@ -4,7 +4,7 @@ An Android runtime diagnostics framework for detecting exceptions, collecting ex
 
 <div align="center">
 
-  <img src="readme/img/spider_xiaohei.png" width="280" alt="Ember Logo">
+  <img src="readme/img/spider_xiaohei.png" width="260" alt="Ember Logo">
 
 </div>
 
