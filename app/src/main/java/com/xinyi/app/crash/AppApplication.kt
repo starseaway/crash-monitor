@@ -4,12 +4,16 @@ import android.app.Application
 import com.xinyi.crash.CrashMonitor
 import com.xinyi.crash.config.CrashAction
 import com.xinyi.crash.config.CrashUiMode
+import com.xinyi.device.DeviceContext
 import com.xinyi.ember.Ember
 
 class AppApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        // 初始化设备工具包库
+        DeviceContext.init(this)
+
         // 初始化日志框架
         Ember.init(Ember.builder().build())
 
