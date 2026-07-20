@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#FF111111</color>
+    <color name="primary_dark">#FF0A0A0A</color>
+    <color name="on_primary">#FFFFFFFF</color>
+    <color name="surface">#FFF5F5F5</color>
+    <color name="but_hint">#FF444444</color>
+    <color name="accent">#FFC04545</color>
+    <color name="accent_pressed">#FFA33A3A</color>
+    <color name="ripple">#33C04545</color>
+    <color name="color_CCFFFFFF">#CCFFFFFF</color>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 崩溃页主题 -->
+    <style name="CrashMonitor.Crash" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@color/crash_background</item>
+        <item name="android:colorBackground">@color/crash_background</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textColorHighlight">@color/crash_text_highlight</item>
+        <item name="android:colorControlHighlight" tools:targetApi="21">@color/crash_text_highlight</item>
+    </style>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="crash_title_interactive">应用发生异常</string>
+    <string name="crash_title_transition">正在恢复运行环境</string>
+    <string name="crash_message_interactive">下方详情内容可长按复制。本次完整崩溃报告已保存至日志文件。</string>
+    <string name="crash_message_transition">系统检测到异常，正在重新启动应用，请稍候…</string>
+    <string name="crash_label_id">崩溃 ID</string>
+    <string name="crash_label_time">发生时间</string>
+    <string name="crash_label_version">版本名称</string>
+    <string name="crash_label_exception">异常信息</string>
+    <string name="crash_label_thread">崩溃线程</string>
+    <string name="crash_label_log_file">日志文件</string>
+    <string name="crash_label_stack">堆栈摘要</string>
+    <string name="crash_btn_exit">退出应用</string>
+    <string name="crash_btn_restart">重新启动</string>
+</resources>

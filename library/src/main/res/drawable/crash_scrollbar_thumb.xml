@@ -1,0 +1,12 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners android:radius="8dp" />
+            <solid android:color="@color/crash_accent" />
+
+            <size
+                android:width="5dp"
+                android:height="15dp" />
+        </shape>
+    </item>
+</layer-list>

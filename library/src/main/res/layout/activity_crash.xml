@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_crash_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/crash_background"
+    android:orientation="vertical"
+    android:paddingHorizontal="10dp"
+    android:paddingTop="32dp"
+    android:paddingBottom="24dp">
+
+    <ImageView
+        android:id="@+id/iv_crash_logo"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/crash_title_interactive"
+        android:scaleType="centerInside"
+        android:src="@drawable/crash_icon" />
+
+    <TextView
+        android:id="@+id/tv_crash_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/crash_title_interactive"
+        android:textColor="@color/crash_title"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_crash_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:paddingHorizontal="10dp"
+        android:text="@string/crash_message_interactive"
+        android:textColor="@color/crash_message"
+        android:textSize="14sp" />
+
+    <FrameLayout
+        android:id="@+id/fl_crash_progress"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/crash_progress_track" />
+
+        <ImageView
+            android:id="@+id/iv_crash_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:importantForAccessibility="no"
+            android:src="@drawable/crash_progress_spinner" />
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/sv_crash_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:background="@color/crash_background"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:paddingHorizontal="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_crash_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/crash_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_crash_label_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/crash_label_id"
+                android:textColor="@color/crash_label"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_crash_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/crash_value"
+                android:textIsSelectable="true"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_crash_label_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/crash_label_time"
+                android:textColor="@color/crash_label"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_crash_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/crash_value"
+                android:textIsSelectable="true"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_crash_label_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/crash_label_version"
+                android:textColor="@color/crash_label"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_crash_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/crash_value"
+                android:textIsSelectable="true"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_crash_label_exception"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/crash_label_exception"
+                android:textColor="@color/crash_label"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_crash_exception"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/crash_value"
+                android:textIsSelectable="true"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_crash_label_thread"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/crash_label_thread"
+                android:textColor="@color/crash_label"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_crash_thread"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/crash_value"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_crash_label_log_file"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/crash_label_log_file"
+                android:textColor="@color/crash_label"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_crash_log_file"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/crash_value"
+                android:textIsSelectable="true"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_crash_label_stack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/crash_label_stack"
+                android:textColor="@color/crash_label"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_crash_stack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:lineSpacingExtra="2dp"
+                android:textIsSelectable="true"
+                android:textSize="11sp"
+                android:typeface="monospace" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_crash_actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp">
+
+        <TextView
+            android:id="@+id/btn_crash_restart"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/crash_btn_restart"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/crash_btn_restart"
+            android:textColor="@color/crash_btn_restart_text"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/btn_crash_exit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/crash_btn_exit"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/crash_btn_exit"
+            android:textColor="@color/crash_btn_exit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

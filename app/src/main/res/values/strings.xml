@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Crash Monitor</string>
+    <string name="app_slogan">察变于未兆，留痕于既往。</string>
+    <string name="but_hint">点击下方按钮，模拟一次未捕获异常。</string>
+    <string name="trigger_crash">触发崩溃</string>
+</resources>
