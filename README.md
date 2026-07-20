@@ -50,33 +50,35 @@ An Android runtime diagnostics framework for detecting exceptions, collecting ex
 
 ### 演示效果
 
+可直接下载体验示例 APK：[app-release.apk](app/release/app-release.apk)
+
 Demo 主页：
 
 <div align="center">
-  <img src="readme/img/demo_app_main.jpg" width="240" alt="Demo 主页">
+  <img src="readme/img/demo_app_main.jpg" width="240" alt="Demo 主页" style="border: 1px solid #DDDDDD; border-radius: 4px;">
 </div>
 
 内置崩溃页（交互模式）：
 
 <div align="center">
-  <img src="readme/img/interactive_portrait_page.jpg" width="240" alt="交互崩溃页竖屏">
+  <img src="readme/img/interactive_portrait_page.jpg" width="240" alt="交互崩溃页竖屏" style="border: 1px solid #DDDDDD; border-radius: 4px;">
   &nbsp;&nbsp;
-  <img src="readme/img/interactive_landscape_page.jpg" width="360" alt="交互崩溃页横屏">
+  <img src="readme/img/interactive_landscape_page.jpg" width="360" alt="交互崩溃页横屏" style="border: 1px solid #DDDDDD; border-radius: 4px;">
   <p>竖屏 / 横屏</p>
 </div>
 
 过渡页（展示提示后按配置自动退出或重启）：
 
 <div align="center">
-  <img src="readme/img/transition_page.jpg" width="240" alt="过渡页">
+  <img src="readme/img/transition_page.jpg" width="240" alt="过渡页" style="border: 1px solid #DDDDDD; border-radius: 4px;">
 </div>
 
 本地日志：
 
 <div align="center">
-  <img src="readme/img/crash_log_directory.png" width="280" alt="崩溃日志目录">
+  <img src="readme/img/crash_log_directory.png" width="280" alt="崩溃日志目录" style="border: 1px solid #DDDDDD; border-radius: 4px;">
   &nbsp;&nbsp;
-  <img src="readme/img/crash_log_file_info.png" width="280" alt="崩溃日志内容">
+  <img src="readme/img/crash_log_file_info.png" width="280" alt="崩溃日志内容" style="border: 1px solid #DDDDDD; border-radius: 4px;">
   <p>日志目录 / 日志内容</p>
 </div>
 
