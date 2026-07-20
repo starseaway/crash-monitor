@@ -16,7 +16,7 @@
         android:layout_gravity="center_horizontal"
         android:contentDescription="@string/crash_title_interactive"
         android:scaleType="centerInside"
-        android:src="@drawable/crash_icon" />
+        android:src="@mipmap/crash_logo" />
 
     <TextView
         android:id="@+id/tv_crash_title"
@@ -82,111 +82,40 @@
             android:background="@color/crash_background"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_crash_label_id"
+            <com.xinyi.crash.page.CrashFieldItemView
+                android:id="@+id/field_crash_id"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/crash_label_id"
-                android:textColor="@color/crash_label"
-                android:textSize="12sp" />
+                android:layout_height="wrap_content" />
 
-            <TextView
-                android:id="@+id/tv_crash_id"
+            <com.xinyi.crash.page.CrashFieldItemView
+                android:id="@+id/field_crash_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textColor="@color/crash_value"
-                android:textIsSelectable="true"
-                android:textSize="13sp" />
+                android:layout_marginTop="12dp" />
 
-            <TextView
-                android:id="@+id/tv_crash_label_time"
+            <com.xinyi.crash.page.CrashFieldItemView
+                android:id="@+id/field_crash_version"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="@string/crash_label_time"
-                android:textColor="@color/crash_label"
-                android:textSize="12sp" />
+                android:layout_marginTop="12dp" />
 
-            <TextView
-                android:id="@+id/tv_crash_time"
+            <com.xinyi.crash.page.CrashFieldItemView
+                android:id="@+id/field_crash_exception"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textColor="@color/crash_value"
-                android:textIsSelectable="true"
-                android:textSize="13sp" />
+                android:layout_marginTop="12dp" />
 
-            <TextView
-                android:id="@+id/tv_crash_label_version"
+            <com.xinyi.crash.page.CrashFieldItemView
+                android:id="@+id/field_crash_thread"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="@string/crash_label_version"
-                android:textColor="@color/crash_label"
-                android:textSize="12sp" />
+                android:layout_marginTop="12dp" />
 
-            <TextView
-                android:id="@+id/tv_crash_version"
+            <com.xinyi.crash.page.CrashFieldItemView
+                android:id="@+id/field_crash_log_file"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textColor="@color/crash_value"
-                android:textIsSelectable="true"
-                android:textSize="13sp" />
-
-            <TextView
-                android:id="@+id/tv_crash_label_exception"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="@string/crash_label_exception"
-                android:textColor="@color/crash_label"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/tv_crash_exception"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textColor="@color/crash_value"
-                android:textIsSelectable="true"
-                android:textSize="13sp" />
-
-            <TextView
-                android:id="@+id/tv_crash_label_thread"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="@string/crash_label_thread"
-                android:textColor="@color/crash_label"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/tv_crash_thread"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textColor="@color/crash_value"
-                android:textSize="13sp" />
-
-            <TextView
-                android:id="@+id/tv_crash_label_log_file"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="@string/crash_label_log_file"
-                android:textColor="@color/crash_label"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/tv_crash_log_file"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textColor="@color/crash_value"
-                android:textIsSelectable="true"
-                android:textSize="13sp" />
+                android:layout_marginTop="12dp" />
 
             <TextView
                 android:id="@+id/tv_crash_label_stack"

@@ -8,6 +8,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.gyf.immersionbar.ImmersionBar;
 import com.xinyi.device.app.AppManager;
 
 /**
@@ -22,11 +23,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        ImmersionBar.with(this)
+                // 自动适配暗色模式
+                .autoDarkModeEnable(true, 0.2f)
+                .fitsSystemWindows(false)
+                .init();
+        ImmersionBar.setTitleBar(this, findViewById(R.id.ll_toolbar));
 
         // 显示版本名
         TextView appVersion = findViewById(R.id.tv_app_version);

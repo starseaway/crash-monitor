@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CrashFieldItemView：固定单行 KV，值过长时在值区域内自动换行 -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tv_crash_field_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/crash_label"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_crash_field_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_weight="1"
+        android:breakStrategy="simple"
+        android:hyphenationFrequency="none"
+        android:textColor="@color/crash_value"
+        android:textIsSelectable="true"
+        android:textSize="13sp" />
+</merge>

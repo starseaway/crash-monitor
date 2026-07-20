@@ -7,11 +7,14 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.Gravity
 import android.view.KeyEvent
 import android.view.View
 import android.view.WindowManager
 import android.view.animation.LinearInterpolator
+import android.widget.FrameLayout
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import com.xinyi.crash.R
 import com.xinyi.crash.config.CrashAction
@@ -103,29 +106,42 @@ open class CrashActivity : Activity() {
         }
 
         val customMessage = intent.getStringExtra(CrashIntent.EXTRA_MESSAGE)
-        findViewById<TextView?>(R.id.tv_crash_id)?.text =
-            intent.getStringExtra(CrashIntent.EXTRA_CRASH_ID).orUnknown()
+
+        findViewById<CrashFieldItemView?>(R.id.field_crash_id)?.setField(
+            label = getString(R.string.crash_label_id),
+            value = intent.getStringExtra(CrashIntent.EXTRA_CRASH_ID).orUnknown()
+        )
 
         val timestampMillis = intent.getLongExtra(CrashIntent.EXTRA_TIMESTAMP_MILLIS, 0L)
-        findViewById<TextView?>(R.id.tv_crash_time)?.text =
-            CrashTimeFormatter.format(timestampMillis).orUnknown()
+        findViewById<CrashFieldItemView?>(R.id.field_crash_time)?.setField(
+            label = getString(R.string.crash_label_time),
+            value = CrashTimeFormatter.format(timestampMillis).orUnknown()
+        )
 
-        findViewById<TextView?>(R.id.tv_crash_version)?.text =
-            intent.getStringExtra(CrashIntent.EXTRA_APP_VERSION_NAME).orUnknown()
+        findViewById<CrashFieldItemView?>(R.id.field_crash_version)?.setField(
+            label = getString(R.string.crash_label_version),
+            value = intent.getStringExtra(CrashIntent.EXTRA_APP_VERSION_NAME).orUnknown()
+        )
 
         val exceptionType = intent.getStringExtra(CrashIntent.EXTRA_EXCEPTION_TYPE).orUnknown()
         val exceptionMessage = intent.getStringExtra(CrashIntent.EXTRA_EXCEPTION_MESSAGE)
-        findViewById<TextView?>(R.id.tv_crash_exception)?.text =
-            if (exceptionMessage.isNullOrBlank()) {
-                exceptionType
-            } else {
-                "$exceptionType: $exceptionMessage"
-            }
+        val exceptionText = if (exceptionMessage.isNullOrBlank()) exceptionType
+                            else "$exceptionType: $exceptionMessage"
+        findViewById<CrashFieldItemView?>(R.id.field_crash_exception)?.setField(
+            label = getString(R.string.crash_label_exception),
+            value = exceptionText
+        )
 
-        findViewById<TextView?>(R.id.tv_crash_thread)?.text =
-            intent.getStringExtra(CrashIntent.EXTRA_THREAD_NAME).orUnknown()
-        findViewById<TextView?>(R.id.tv_crash_log_file)?.text =
-            intent.getStringExtra(CrashIntent.EXTRA_LOG_FILE_PATH).orUnknown()
+        findViewById<CrashFieldItemView?>(R.id.field_crash_thread)?.setField(
+            label = getString(R.string.crash_label_thread),
+            value = intent.getStringExtra(CrashIntent.EXTRA_THREAD_NAME).orUnknown(),
+            selectable = false
+        )
+
+        findViewById<CrashFieldItemView?>(R.id.field_crash_log_file)?.setField(
+            label = getString(R.string.crash_label_log_file),
+            value = intent.getStringExtra(CrashIntent.EXTRA_LOG_FILE_PATH).orUnknown()
+        )
 
         bindStackSummary(
             intent.getStringExtra(CrashIntent.EXTRA_STACK_SUMMARY).orUnknown()
@@ -172,6 +188,7 @@ open class CrashActivity : Activity() {
         findViewById<View?>(R.id.fl_crash_progress)?.visibility = View.GONE
         findViewById<View?>(R.id.sv_crash_detail)?.visibility = View.VISIBLE
         findViewById<View?>(R.id.ll_crash_actions)?.visibility = View.VISIBLE
+        applyTransitionCentered(false)
 
         findViewById<TextView?>(R.id.btn_crash_exit)?.setOnClickListener {
             performExit()
@@ -193,6 +210,7 @@ open class CrashActivity : Activity() {
         findViewById<View?>(R.id.sv_crash_detail)?.visibility = View.GONE
         findViewById<View?>(R.id.ll_crash_actions)?.visibility = View.GONE
         findViewById<View?>(R.id.fl_crash_progress)?.visibility = View.VISIBLE
+        applyTransitionCentered(true)
         startProgressAnimation()
 
         val displayMillis = intent.getLongExtra(
@@ -200,6 +218,28 @@ open class CrashActivity : Activity() {
             CrashConfig.DEFAULT_CRASH_UI_DISPLAY_MILLIS
         ).coerceAtLeast(0L)
         mMainHandler.postDelayed({ performDefaultAction() }, displayMillis)
+    }
+
+    /**
+     * 过渡页将 Logo / 标题 / 提示 / 进度垂直居中；交互页恢复顶对齐
+     */
+    private fun applyTransitionCentered(centered: Boolean) {
+        val root = findViewById<LinearLayout?>(R.id.ll_crash_root) ?: return
+        if (root.orientation == LinearLayout.VERTICAL) {
+            root.gravity = if (centered) Gravity.CENTER else Gravity.TOP
+            return
+        }
+        // 横屏：隐藏分隔线，侧栏内容居中
+        findViewById<View?>(R.id.v_crash_divider)?.visibility =
+            if (centered) View.GONE else View.VISIBLE
+        val header = findViewById<View?>(R.id.ll_crash_header) ?: return
+        val lp = header.layoutParams as? FrameLayout.LayoutParams ?: return
+        lp.gravity = if (centered) {
+            Gravity.CENTER
+        } else {
+            Gravity.TOP or Gravity.CENTER_HORIZONTAL
+        }
+        header.layoutParams = lp
     }
 
     /**

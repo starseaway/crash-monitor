@@ -44,7 +44,7 @@
         android:layout_height="150dp"
         android:layout_marginHorizontal="24dp"
         android:gravity="center"
-        android:src="@mipmap/app_logo"
+        android:src="@mipmap/crash_logo"
         app:layout_constraintBottom_toTopOf="@id/tv_app_slogan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

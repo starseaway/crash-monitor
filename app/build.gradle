@@ -46,5 +46,9 @@ dependencies {
     // 开源地址：https://github.com/starseaway/device-toolkit
     implementation libs.device.toolkit
 
+    // 沉浸式框架
+    // 开源地址: https://github.com/gyf-dev/ImmersionBar
+    implementation(libs.immersionbar)
+
     implementation(project(":library"))
 }

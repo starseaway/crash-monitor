@@ -2,7 +2,7 @@
 <resources>
     <string name="crash_title_interactive">应用发生异常</string>
     <string name="crash_title_transition">正在恢复运行环境</string>
-    <string name="crash_message_interactive">下方详情内容可长按复制。本次完整崩溃报告已保存至日志文件。</string>
+    <string name="crash_message_interactive">下方摘要内容可长按复制。本次完整崩溃报告已保存至日志文件。</string>
     <string name="crash_message_transition">系统检测到异常，正在重新启动应用，请稍候…</string>
     <string name="crash_label_id">崩溃 ID</string>
     <string name="crash_label_time">发生时间</string>

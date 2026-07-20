@@ -65,6 +65,4 @@ dependencies {
     // 日志记录框架
     // 开源地址：https://github.com/starseaway/ember
     api 'com.github.starseaway:ember:1.0.0'
-
-    testImplementation libs.junit
 }

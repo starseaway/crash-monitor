@@ -50,6 +50,38 @@ An Android runtime diagnostics framework for detecting exceptions, collecting ex
 
 ### 演示效果
 
+Demo 主页：
+
+<div align="center">
+  <img src="readme/img/demo_app_main.jpg" width="240" alt="Demo 主页">
+</div>
+
+内置崩溃页（交互模式）：
+
+<div align="center">
+  <img src="readme/img/interactive_portrait_page.jpg" width="240" alt="交互崩溃页竖屏">
+  &nbsp;&nbsp;
+  <img src="readme/img/interactive_landscape_page.jpg" width="360" alt="交互崩溃页横屏">
+  <p>竖屏 / 横屏</p>
+</div>
+
+过渡页（展示提示后按配置自动退出或重启）：
+
+<div align="center">
+  <img src="readme/img/transition_page.jpg" width="240" alt="过渡页">
+</div>
+
+本地日志：
+
+<div align="center">
+  <img src="readme/img/crash_log_directory.png" width="280" alt="崩溃日志目录">
+  &nbsp;&nbsp;
+  <img src="readme/img/crash_log_file_info.png" width="280" alt="崩溃日志内容">
+  <p>日志目录 / 日志内容</p>
+</div>
+
+无界面模式（`setShowCrashUi(false)`）：不展示任何崩溃页，写完日志并回调后直接按 `CrashAction` 退出或重启，用户无感知。
+
 ## 二、SDK 适用范围
 
 | 项目         | 要求                                                             |
