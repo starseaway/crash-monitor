@@ -6,6 +6,8 @@ An Android runtime diagnostics framework for detecting exceptions, collecting ex
 
   <img src="readme/img/spider_xiaohei.png" width="260" alt="Ember Logo">
 
+  <br>
+  <br>
 </div>
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
