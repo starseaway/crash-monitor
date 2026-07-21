@@ -10,7 +10,7 @@ An Android runtime diagnostics framework for detecting exceptions, collecting ex
   <br>
 </div>
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-1.0.1-blue)
 ![License](https://img.shields.io/badge/license-Apache%202.0-green)
 ![API](https://img.shields.io/badge/API-19%2B-brightgreen)
 
@@ -108,13 +108,13 @@ maven {
 Groovy：
 
 ```groovy
-implementation 'com.github.starseaway:crash-monitor:1.0.0'
+implementation 'com.github.starseaway:crash-monitor:1.0.1'
 ```
 
 Kotlin DSL：
 
 ```kotlin
-implementation("com.github.starseaway:crash-monitor:1.0.0")
+implementation("com.github.starseaway:crash-monitor:1.0.1")
 ```
 
 框架会传递引入 `Ember` 依赖库，无需重复声明相同版本。
