@@ -19,9 +19,9 @@ class AppApplication : Application() {
 
         // 初始化崩溃监听器框架
         val crashConfig = CrashMonitor.builder()
-            .setCrashAction(CrashAction.EXIT)
+            .setCrashAction(CrashAction.RESTART)
             .setShowCrashUi(true)
-            .setCrashUiMode(CrashUiMode.TRANSITION)
+            .setCrashUiMode(CrashUiMode.INTERACTIVE)
             .build()
         CrashMonitor.init(this, crashConfig) { report ->
             // 此时文件已同步写完；不要在这里杀进程或重启

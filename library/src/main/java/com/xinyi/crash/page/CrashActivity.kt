@@ -202,10 +202,22 @@ open class CrashActivity : Activity() {
      * 过渡模式：隐藏按钮，展示进度后自动执行默认动作
      */
     protected open fun setupTransitionMode() {
-        findViewById<TextView?>(R.id.tv_crash_title)?.setText(R.string.crash_title_transition)
+        val isRestart = resolveCrashAction() == CrashAction.RESTART
+        findViewById<TextView?>(R.id.tv_crash_title)?.setText(
+            if (isRestart) {
+                R.string.crash_title_transition_restart
+            } else {
+                R.string.crash_title_transition_exit
+            }
+        )
         if (intent.getStringExtra(CrashIntent.EXTRA_MESSAGE).isNullOrBlank()) {
-            findViewById<TextView?>(R.id.tv_crash_message)
-                ?.setText(R.string.crash_message_transition)
+            findViewById<TextView?>(R.id.tv_crash_message)?.setText(
+                if (isRestart) {
+                    R.string.crash_message_transition_restart
+                } else {
+                    R.string.crash_message_transition_exit
+                }
+            )
         }
         findViewById<View?>(R.id.sv_crash_detail)?.visibility = View.GONE
         findViewById<View?>(R.id.ll_crash_actions)?.visibility = View.GONE
