@@ -63,14 +63,16 @@ Demo 主页：
 <div align="center">
   <img src="readme/img/interactive_portrait_page.jpg" width="240" alt="交互崩溃页竖屏">
   &nbsp;&nbsp;
-  <img src="readme/img/interactive_landscape_page.jpg" width="420" alt="交互崩溃页横屏">
+  <img src="readme/img/interactive_landscape_page.jpg" width="560" alt="交互崩溃页横屏">
   <p>竖屏 / 横屏</p>
 </div>
 
-过渡页（展示提示后按配置自动退出或重启）：
+过渡页（过度模式）：
 
 <div align="center">
   <img src="readme/img/transition_page.jpg" width="240" alt="过渡页">
+  &nbsp;&nbsp;
+  <p>展示提示后按配置自动退出或重启</p>
 </div>
 
 本地日志：
